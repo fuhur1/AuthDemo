@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <% if (error) {%>
+        <h4><%=error.message%></h4>
+    <%}%>
+
+    <form action="/register" method="POST">
+      <input type="text" name="username", placeholder="User name">
+      <input type="password" name="password", placeholder="Password">
+      <input type="email" name="email" placeholder="email">
+      <input type="submit">
+    </form>
+
+    <ul>
+      <li><a href="/register">Register</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/logout">Log out</a></li>
+    </ul>
+  </body>
+</html>
